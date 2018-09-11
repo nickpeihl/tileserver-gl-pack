@@ -1,8 +1,8 @@
 # tileserver-gl-pack
 Repackaged tileserver-gl including styles and fonts
 
-* /fonts
-* /styles/<name>/style-local.json
+* `/fonts`
+* `/styles/[name]/style-local.json`
 
 Added styles:
 * dark-matter
