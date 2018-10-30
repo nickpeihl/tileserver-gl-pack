@@ -51,7 +51,7 @@ RUN echo "STYLES: Downloading and modifying style files" \
  && STYLE_DIR=/styles/$STYLE \
  && echo "Downloading style $STYLE" \
  && mkdir -p $STYLE_DIR \
- && curl -s -L https://github.com/openmaptiles/$STYLE-gl-style/tarball/master | tar xz --strip=1 -C $STYLE_DIR \
+ && curl -s -L https://github.com/elastic/$STYLE-gl-style/tarball/master | tar xz --strip=1 -C $STYLE_DIR \
  && cat $STYLE_DIR/style.json | jq '.sources.openmaptiles.url = "mbtiles://{v3}" | .sprite = "{styleJsonFolder}/sprite" | .glyphs = "{fontstack}/{range}.pbf"' > $STYLE_DIR/style-local.json \
  && /usr/src/sprites/node_modules/.bin/spritezero $STYLE_DIR/sprite $STYLE_DIR/icons \
  && /usr/src/sprites/node_modules/.bin/spritezero --retina $STYLE_DIR/sprite@2x $STYLE_DIR/icons \
