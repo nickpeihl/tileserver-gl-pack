@@ -1,5 +1,5 @@
 FROM klokantech/tileserver-gl:latest
-MAINTAINER Yuri Astrakhan <yuriastrakhan@gmail.co>
+MAINTAINER Yuri Astrakhan <yuriastrakhan@gmail.com>
 
 RUN apt-get -qq update \
  && DEBIAN_FRONTEND=noninteractive apt-get -y install \
