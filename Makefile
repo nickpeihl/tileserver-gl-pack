@@ -1,11 +1,14 @@
+VERSION = 1.0.0
+IMAGE = push.docker.elastic.co/tileserver-gl-pack/tileserver-gl-pack:${VERSION}
+
 .PHONY: build
 build:
-	docker build . -t nyurik/tileserver-gl-pack -f Dockerfile
+	docker build -t ${IMAGE} .
 
 .PHONY: run
 run: build
-	docker run -it --rm tileserver-gl-pack
+	docker run -it --rm ${IMAGE}
 
 .PHONY: publish
 publish: build
-	docker push nyurik/tileserver-gl-pack
+	docker push ${IMAGE}
