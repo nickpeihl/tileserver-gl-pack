@@ -8,17 +8,17 @@ Added styles:
 * dark-matter
 * klokanetech-basic
 * osm-bright
+* osm-bright-desaturated
 * positron
 
 # Running
 
 ```bash
-docker run -it --rm nyurik/tileserver-gl-pack <parameters>
+docker run -it --rm docker.elastic.co/tileserver-gl-pack/tileserver-gl-pack <parameters>
 ```
 
 # Testing Locally
-Uncomment ENTRYPOINT and CMD lines in the Dockerfile, and run this:
 
 ```bash
-docker build . -t tileserver-gl-pack -f Dockerfile && docker run -it --rm tileserver-gl-pack
+docker build . -t tileserver-gl-pack && docker run -it --rm --entrypoint "/bin/bash" tileserver-gl-pack
 ```
